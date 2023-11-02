@@ -242,7 +242,7 @@ body {
 .btnAqua a{
     transform: translateZ(10px);
     /* transition: all 0.2s ease-in-out; */
-    padding: 10px 5px;
+    padding: 26px 50px;
     color: #ffffff;
 }
 
