@@ -11,7 +11,7 @@ html{
     padding: 0;
     list-style: none;
     text-decoration: none;
-    color:#ffff;
+    color:antiquewhite;
 }
 /* a{
     color:#000000;
@@ -181,6 +181,7 @@ body {
     backface-visibility: hidden;
 }
 .front{
+    z-index: 0;
     border: solid 1px black;
     perspective: 1000px;
     transform-style: preserve-3d ;
@@ -202,6 +203,7 @@ body {
     height: 100%;
 }
 .back{ 
+    z-index: 1;
     transform-style: preserve-3d;
     perspective: 900px;
     transform: rotateY(180deg);
@@ -231,7 +233,7 @@ body {
     transform: translateZ(15px);
     padding-top: 30px;
 }
-.btnAqua{
+/* .btnAqua{
     height: 56px;
     width: 185px;
     border-radius: 50px;
@@ -241,8 +243,54 @@ body {
 }
 .btnAqua a{
     transform: translateZ(10px);
-    /* transition: all 0.2s ease-in-out; */
+    transition: all 0.2s ease-in-out;
     padding: 26px 50px;
     color: #ffffff;
+} */
+/* .btnAqua{
+    perspective: 1000px;
+    transform-style: preserve-3d ;
+    margin-top: 185px;
+    transform: translate(0,90px) translateZ(10px);
+    border: 0px;
+    background-color: #29282c00;
+} */
+.contentCard{
+    transition: all 0.15s ease-in-out;
+    perspective: 1000px;
+    transform-style: preserve-3d ;
 }
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    transform-style: preserve-3d ;
+}
+.card{
 
+    width: 225px;
+    height: 35px;
+    perspective: 1000px;
+    transform-style: preserve-3d ;
+    transform: translate(0, 150px) translateZ(40px);
+}
+.card:hover{
+    z-index: 10;
+}
+.btnCard{
+    perspective: 1000px;
+    transform-style: preserve-3d ;
+    border-radius: 50px;
+    text-decoration: none;
+    color: antiquewhite;
+    letter-spacing: 2px;
+    font-size: 20px;
+    background: #29282c;
+    padding: 16px 30px;
+    box-shadow: 0 0 80px -10px #4d0000;
+    transition: all 0.4s ease-in-out;
+}
+.btnCard:hover{
+    box-shadow: 0 0 80px -5px #8f001fa8;
+}
