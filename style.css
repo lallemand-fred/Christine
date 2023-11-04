@@ -138,11 +138,14 @@ body {
 }
 /* --------------------------Section Lien carte flip------------------------------- */
 .CarteDyna {
-    
+    padding-right: 10%;
+    padding-left: 10%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
     /* perspective: 900px;
     transform-style: preserve-3d; */
     background-color: #b97a47;
@@ -151,7 +154,6 @@ body {
         #b97a47,
         #302f34,
         #29282c);
-    
 }
 .wrapper,.single-card{
     height: 450px;
@@ -160,7 +162,6 @@ body {
     position: relative;
 }
 .wrapper{
-    /* -webkit-perspective: 1000; */
     perspective: 500px;
     transform-style: preserve-3d;
 }
@@ -187,8 +188,6 @@ body {
     transform-style: preserve-3d ;
     cursor: pointer;
     height: 100%;
-    /* background: linear-gradient(45deg, rgb(116, 30, 30),rgb(39, 39, 134)); */
-    /* background-image:url(../media/imgEffet/planetePasserelle1080px.png); */
     backface-visibility: hidden;
     border-radius: 50px;
     /* background-size: contain;
@@ -268,7 +267,6 @@ body {
     transform-style: preserve-3d ;
 }
 .card{
-
     width: 225px;
     height: 35px;
     perspective: 1000px;
