@@ -1,6 +1,7 @@
 /*-------------------Lien du font-family-----------------*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 html{
     scroll-behavior: smooth;
@@ -124,16 +125,18 @@ body {
     z-index: 10;
 }
 .presentation {
+    
     z-index: 10;
     position: relative;
     width: 100%;
-    height: 20vh;
+    height: 30vh;
     background-color:#b97a47;
-    padding: 90px 0px 30px 0px;
+    padding: 90px 0px 200px 0px;
+
 }
 .presentation p{
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.3rem;
     padding: 0px 15%;
 }
 /* --------------------------Section Lien carte flip------------------------------- */
@@ -173,6 +176,17 @@ body {
 }
 .wrapper:hover .single-card{
     transform: rotateY(180deg) ;
+}
+.single-card h2{
+    backface-visibility: hidden;
+    width: 100%;
+    transform: translate(0, -50px) translateZ(10px);
+    position: absolute;
+    transform-style: preserve-3d;
+    perspective: 900px;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: 'Dancing Script' , sans-serif;
 }
 .front, .back{
     width: 300px;
@@ -222,16 +236,11 @@ body {
     transform-style: preserve-3d;
     padding-top: 65px;
 }
-.content h2{
-    transform: translateZ(50px);
-    font-size: 35px;
-    margin: 0;
-    font-weight: 600;
-}
 .content p{
-    transform: translateZ(15px);
-    padding-top: 30px;
+    transform:translate(0px,25px) translateZ(35px);
+    
 }
+
 /* .btnAqua{
     height: 56px;
     width: 185px;
@@ -254,10 +263,14 @@ body {
     border: 0px;
     background-color: #29282c00;
 } */
+.contentCard a{
+    padding: 16px 20px;
+}
 .contentCard{
     transition: all 0.15s ease-in-out;
     perspective: 1000px;
     transform-style: preserve-3d ;
+    position: absolute;
 }
 .container{
     display: flex;
@@ -265,30 +278,121 @@ body {
     align-items: center;
     perspective: 1000px;
     transform-style: preserve-3d ;
+    width: 100%;
+    height: 100%;
 }
+
 .card{
-    width: 225px;
-    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     perspective: 1000px;
     transform-style: preserve-3d ;
-    transform: translate(0, 150px) translateZ(40px);
+    transform: translate(0, 245px) translateZ(40px);
 }
 .card:hover{
     z-index: 10;
 }
 .btnCard{
+    width: 150px;
+    height: 25px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;   
     perspective: 1000px;
     transform-style: preserve-3d ;
     border-radius: 50px;
     text-decoration: none;
     color: antiquewhite;
-    letter-spacing: 2px;
-    font-size: 20px;
+    font-size: 24px;
     background: #29282c;
-    padding: 16px 30px;
     box-shadow: 0 0 80px -10px #4d0000;
     transition: all 0.4s ease-in-out;
+    font-family: 'Dancing Script' , sans-serif;
+    font-weight: 900;
+    letter-spacing: 1px;
 }
 .btnCard:hover{
     box-shadow: 0 0 80px -5px #8f001fa8;
+}
+/* -----------------------FOOTER------------------------ */
+footer{
+    padding-top: 0px;
+    padding-bottom: 5px;
+    height: 100%;
+    background-color: #29282c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* ---------ICONES------ */
+.containerSocial{
+    padding-top: 50px;
+    gap: 80px;
+    padding: 100px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+/* -------------icone envelope-------------- */
+
+/* -----------------Instagrame----------------------- */
+
+
+#face{
+    width: 100px;
+    height: 100px;
+}
+#face:hover{
+    border-radius: 6px;
+    background: #026ae3;
+    transition: all 0.3s ease-in-out;
+}
+#insta{
+    transition: all 0.2s ease-in-out;
+    border-radius: 28px;
+    width: 100px;
+    height: 100px;
+}
+#insta:hover{
+    background: linear-gradient(312deg, #f2b952,#f2b952, 
+    #e2204d, #ab2f9d,#2e1ce5, #2e1ce5);
+    transition: all 0.2s ease-in-out;
+}
+
+#envelope{
+
+    width: 110px;
+    height: 140px;
+}
+/* -----------------FIN ICONES----------------------- */
+.deuxiemeTrait{
+    width: 25%;
+    height: 1px;
+    background: linear-gradient(
+        to left,transparent, antiquewhite, transparent);
+
+}
+.deuxiemeTrait01{
+    
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        to left,transparent, antiquewhite, transparent);
+
+}
+.copyrightEtIcons{
+    font-size: 0.9rem;
+}
+.copyrightEtIcons a {
+    font-size: 1.2rem;
+}
+.espaceFin{
+    padding: 18px;
+}
+.copyright{
+    padding-top: 25px;
 }
