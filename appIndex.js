@@ -33,12 +33,8 @@ card.forEach((el) => {
     let angleY = -(x - midCardWidth) / 12;
     let angleX = (y - midCardHeight) / 12;
 
-    let glowX = (x / elRect.width) * 100;
-    let glowY = (y / elRect.height) * 100;
-
     el.children[0].style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.1)`;
     el.children[1].style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.1)`;
-    el.children[1].style.background = `radial-gradient(circle at ${glowX}% ${glowY}%, rgba(184,196,211,0.5), transparent)`;
   });
   el.addEventListener("mouseleave", () => {
     el.children[0].style.transform = `rotateX(0deg) rotateY(0deg) scale(1)`;
