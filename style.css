@@ -13,6 +13,7 @@ html{
     list-style: none;
     text-decoration: none;
     color:antiquewhite;
+    /* border: 1px solid red; */
 }
 /* a{
     color:#000000;
@@ -125,14 +126,12 @@ body {
     z-index: 10;
 }
 .presentation {
-    
     z-index: 10;
     position: relative;
     width: 100%;
     height: 30vh;
     background-color:#b97a47;
-    padding: 90px 0px 200px 0px;
-
+    padding: 90px 0px 300px 0px;
 }
 .presentation p{
     text-align: center;
@@ -143,7 +142,7 @@ body {
 .CarteDyna {
     padding-right: 10%;
     padding-left: 10%;
-    height: 100vh;
+    height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -330,17 +329,18 @@ footer{
 }
 /* ---------ICONES------ */
 .containerSocial{
-    padding-top: 50px;
     gap: 80px;
-    padding: 100px 0px;
+    padding: 50px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease-in-out;
+    transform: scale(0.8);
 }
 footer .iconSocial a img{
     width: 100px;
     height:100%;
+    
 }
 
 .face{
@@ -351,7 +351,7 @@ footer .iconSocial a img{
     border-radius: 6px;
     background: #026ae3;
     transition: all 0.4s ease-in-out;
-    transform: translate(0, -24px) rotate(-10deg)
+    transform: translate(0, -24px) rotate(-10deg) scale(1.2);
 }
 .insta{
     transition: all 0.2s ease-in-out;
@@ -365,9 +365,9 @@ footer .iconSocial a img{
     background: linear-gradient(312deg, #f2b952,#f2b952, 
     #e2204d, #ab2f9d,#2e1ce5, #2e1ce5);
     transition: all 0.4s ease-in-out;
-    transform: translate(0, -24px) rotate(-10deg);
+    transform: translate(0, -24px) rotate(-10deg) scale(1.2);
 }
-.envelope::before{
+/* .envelope::before{
     position: absolute;
     content: '';
     background: #4d0000;
@@ -375,7 +375,7 @@ footer .iconSocial a img{
     width: 200px;
     height: 200px;
     z-index: 100;
-}
+} */
 
 .envelope{
     width: 110px;
@@ -387,7 +387,7 @@ footer .iconSocial a img{
 .envelope:hover{
     background-color: #2f4f4f;
     border-radius: 15px;
-    transform: translate(0, -24px) rotate(-10deg);
+    transform: translate(0, -24px) rotate(-10deg) scale(1.2);
 }
 /* -----------------FIN ICONES----------------------- */
 .deuxiemeTrait{
@@ -426,4 +426,105 @@ footer .iconSocial a img{
 }
 .copyright{
     padding-top: 25px;
+}
+@media (max-width: 900px){
+    
+    .CarteDyna {
+        padding-top: 300px;
+        padding-right: 10%;
+        padding-left: 10%;
+        padding-bottom: 250px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 65px;
+    }
+}
+@media (max-width: 750px){
+    .lastName{
+        font-size: 125px;
+        font-weight: 900;
+    }
+    .firstName{
+        font-size: 125px;
+        font-weight: 900;
+    }
+    .presentation {
+        width: 100%;
+        height: 40vh;
+        padding: 90px 0px 400px 0px;
+    }
+}
+@media (max-width: 450px){
+    .lastName{
+        font-size: 100px;
+        font-weight: 900;
+    }
+    .firstName{
+        font-size: 100px;
+        font-weight: 900;
+    }
+    .presentation {
+        width: 100%;
+        height: 60vh;
+        padding: 90px 0px 400px 0px;
+    }
+}
+@media (max-width: 365px){
+    .navbar {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100vw;
+        display: flex;   
+    }
+    .navbarLinks{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 10px;
+        font-size: 12px;
+    }
+    .navbarLogo {
+        font-family: 'Dancing Script' , sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+    }
+    .lastName{
+        transform: translateY(645px);
+        font-size: 70px;
+        font-weight: 900;
+    }
+    .firstName{
+        transform: translateY(565px);
+        font-size: 70px;
+        font-weight: 900;
+    }
+    .presentation {
+        width: 100%;
+        height: 80vh;
+        padding: 90px 0px 450px 0px;
+    }
+    .containerSocial{
+        gap: 30px;
+        padding: 10px 0px;
+        transform: scale(0.6);
+        width: 50vw;
+    }
+    .CarteDyna {
+        padding-top: 300px;
+        padding-right: 1%;
+        padding-left: 1%;
+        padding-bottom: 250px;
+
+    }
+    .envelope{
+        width: 110px;
+        height: 140px;
+        transition: all 0.4s ease-in-out;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }
