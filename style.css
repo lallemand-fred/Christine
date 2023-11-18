@@ -459,6 +459,56 @@ footer .iconSocial a img{
     }
 }
 @media (max-width: 450px){
+    .paralax{
+        width: clamp(150px 100% 80%);
+        height: 150vh;
+    }
+    .paralax img {
+        width:100%;
+        height: 90%;
+    }
+    .imageBackground{
+        z-index: 0;
+    }
+    .lastName{
+        transform: translateY(930px) ;
+        position: absolute;
+        z-index: 1;
+        font-family: 'Dancing Script' , sans-serif;
+        font-size: 150px;
+        font-weight: 900;
+        white-space: nowrap;
+    }
+    .firstName{
+        transform: translateY(810px) ;
+        white-space: nowrap;
+        position: absolute;
+        z-index: 1;
+        font-family: 'Dancing Script' , sans-serif;
+        font-size: 150px;
+        font-weight: 900;
+    }
+    .imageFront{
+        transform: translateY(5px);
+        z-index: 2;
+    }
+    .imageCrabe01{
+        transform: translateY(5px);
+        z-index: 20;
+    }
+    .imageCrabe02{
+        transform: translateY(5px);
+        z-index: 20;
+    }
+    .imageOiseauBas{
+        z-index: 4;
+    }
+    .imageOiseauHaut{
+        z-index: 4;
+    }
+    .imageOiseauMid{
+        z-index: 4;
+    }
     .lastName{
         font-size: 100px;
         font-weight: 900;
@@ -467,10 +517,29 @@ footer .iconSocial a img{
         font-size: 100px;
         font-weight: 900;
     }
+    .CarteDyna {
+        padding-top: 300px;
+        padding-right: 0%;
+        padding-left: 0%;
+        padding-bottom: 250px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 65px;
+    }
     .presentation {
         width: 100%;
-        height: 60vh;
+        height: 65vh;
         padding: 90px 0px 400px 0px;
+    }
+    .containerSocial{
+        gap: 40px;
+        padding: 10px 0px;
+        transform: scale(0.6);
+        width: 50vw;
     }
 }
 @media (max-width: 365px){
@@ -484,41 +553,116 @@ footer .iconSocial a img{
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding-right: 10px;
-        font-size: 12px;
+        padding-right: 0px;
+        font-size: 11px;
     }
     .navbarLogo {
         font-family: 'Dancing Script' , sans-serif;
         font-weight: 700;
-        font-size: 18px;
+        font-size: 14px;
     }
     .lastName{
-        transform: translateY(645px);
-        font-size: 70px;
+        transform: translateY(570px);
+        font-size: 60px;
         font-weight: 900;
     }
     .firstName{
-        transform: translateY(565px);
-        font-size: 70px;
+        transform: translateY(490px);
+        font-size: 60px;
         font-weight: 900;
+    }
+    .presentation::before{
+        content: '';
+        position: absolute;
+        top: -80px;
+        width: 100%;
+        height: 80px;
+        background: linear-gradient(to top, #b97a47, transparent);
+        z-index: 10;
     }
     .presentation {
         width: 100%;
-        height: 80vh;
-        padding: 90px 0px 450px 0px;
+        height: 50vh;
+        padding: 90px 0px 100% 0px;
     }
+    .presentation p{
+        text-align: center;
+        font-size: 1rem;
+        padding: 0px 5%;
+    }
+    .CarteDyna {
+        padding-top: 10px;
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 10px;
+        height: 850px;
+        gap: 4px;
+    }
+    .wrapper,.single-card{
+        height: 450px;
+        min-width: 300px;
+        margin: 0;
+        position: relative;
+        transform: scale(0.8);
+    }
+    .single-card h2{
+        width: 100%;
+        transform: translate(0, -50px) translateZ(10px);
+        font-size: 45px;
+        font-weight: 900;
+        font-family: 'Dancing Script' , sans-serif;
+    }
+    .front, .back{
+        width: 300px;
+        top:10px;
+        left: 0;
+        backface-visibility: hidden;
+        transform: scale(0.9);
+    }
+    .front{
+        z-index: 0;
+        border: solid 1px black;
+        perspective: 600px;
+        transform-style: preserve-3d ;
+        cursor: pointer;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 50px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        box-shadow: -3px 3px 20px 2px rgba(0, 0, 0, 0.2);
+    }
+    .front img{
+        object-fit: cover; 
+        border-radius: 50px;
+        width: 100%;
+        height: 100%;
+    }
+    .back{ 
+        z-index: 1;
+        transform-style: preserve-3d;
+        perspective: 600px;
+        transform: rotateY(180deg);
+        position: absolute;
+        border-radius: 50px;
+        height: 450px;
+
+    }
+    .content{
+        perspective: 600px;
+        transform-style: preserve-3d;
+        padding-top: 65px;
+    }
+    .content p{
+        transform:translate(0px,25px) translateZ(35px);
+        
+    } 
     .containerSocial{
         gap: 30px;
         padding: 10px 0px;
-        transform: scale(0.6);
+        transform: scale(0.5);
         width: 50vw;
-    }
-    .CarteDyna {
-        padding-top: 300px;
-        padding-right: 1%;
-        padding-left: 1%;
-        padding-bottom: 250px;
-
     }
     .envelope{
         width: 110px;
