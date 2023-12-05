@@ -1,8 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
     padding: 0;
     background: #000;
 }
+/*----------------------- navbar ------------------------*/
+
+.navbar {
+    justify-content: flex-end;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100vw;
+    z-index: 100;
+    position:fixed;
+    display: flex;   
+    background: linear-gradient(to bottom, #29282c, rgb(19, 19, 19));
+}
+.navbarLinks{
+    width: 70%;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 40px;
+}
+.navbarLogo {
+    width: 35%;
+    font-family: 'Dancing Script' , sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    padding-left: 24px;
+}
+/* -------------------------------------------------------- */
 .carousel{
     transform: translate(-50%, 50%) scale(2);
     perspective: 700px;
